@@ -1,7 +1,9 @@
 ProfileManagement::Application.routes.draw do
+  get "rake/routes"
+
   devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
   get "home/index"
-
+  get "home/edit"
   root :to => "home#index"
 
   # The priority is based upon order of creation:
