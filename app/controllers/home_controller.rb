@@ -6,5 +6,6 @@ class HomeController < ApplicationController
   end
 
   def edit
+		  @user_info = UserInfo.new
   end
 end
