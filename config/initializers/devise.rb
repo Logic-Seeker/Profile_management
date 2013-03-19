@@ -1,4 +1,4 @@
-# Use this hook to configure devise mailer, warden hooks and so forth.
+0# Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   # ==> Mailer Configuration
@@ -113,8 +113,8 @@ Devise.setup do |config|
   :address              => "smtp.gmail.com",
   :port                 => 587,
   :domain               => "mail.lftechnology.com",
-  :user_name            => "amritdhungana@lftechnology.com",
-  :password             => "@lfmail123",
+  :user_name            => "",
+  :password             => "",
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
