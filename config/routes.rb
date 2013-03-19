@@ -2,8 +2,8 @@ ProfileManagement::Application.routes.draw do
 
   devise_for :users do 
     get '/users/sign_out' => 'devise/sessions#destroy' 
-    match '/users/sign_in' => 'devise/sessions#new' , :as => "log_in"
-    #match '/users/sign_up' => 'devise/registration#new', :as => "sign_up"
+    # match '/users/sign_in' => 'devise/sessions#new' , :as => "log_in"
+    # match '/users/sign_up' => 'devise/registration#new', :as => "sign_up"
 
   end
 
