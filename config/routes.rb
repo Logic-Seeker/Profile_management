@@ -10,9 +10,11 @@ ProfileManagement::Application.routes.draw do
     #match '/users/sign_in' => 'devise/sessions#new' , :as => "login"
 
   get "home/index"
-  get "home/edit"
+  get "home/create"
+  post "home/new"
   root :to => "home#index"
-
+  get "home/edit"
+  put "home/update"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

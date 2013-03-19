@@ -1,3 +1,16 @@
 Welcome to home pages
-
-<%= link_to "Edit",:controller => 'home',:action => 'edit' %>
+<% if UserInfo.find_by_user_id(current_user.id).nil? %>
+		
+		<%= link_to "create",:controller =>'home',:action =>'create' %>
+<% else %>
+<% @user_info = UserInfo.find_by_user_id(current_user.id) %>
+</br>
+</br>
+		Name : <%=@user_info.name  %></br>
+		Email : <%= current_user.email %></br>
+		Age : <%= @user_info.age %></br>
+		Phone No : <%= @user_info.phone %>
+		Occupation : <%= @user_info.occupation %></br>
+		Education : <%= @user_info.education %><br>
+		<%= link_to "Edit",:controller => 'home',:action => 'edit' %>
+<% end %>

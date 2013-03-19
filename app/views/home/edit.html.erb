@@ -1,6 +1,15 @@
-<%= form_for @user_info do |f| %>
-		<%= f.text_field :name %>
-		<%= f.submit%>
+<%= form_for @user_info , :url =>{:action =>"update"} do |f| %>
+			<%= f.label "Name:" %>		
+			<%= f.text_field :name,:value => "#{@user_info.name}" %>
+		<%= f.label "Age:" %>		
+		<%= f.text_field :age ,:value => "#{@user_info.age}" %>
+		<%= f.label "Occupation:" %>		
+		<%= f.text_field :occupation ,:value => "#{@user_info.occupation}" %>
+		<%= f.label "Education:" %>		
+		<%= f.text_field :education ,:value => "#{@user_info.education}" %>
+		<%= f.label "Phone No:" %>		
+<%= f.text_field :phone ,:value => "#{@user_info.phone}" %>
+
+		<%= f.submit "Update"%>
   <% end %>
 
-<%= binding.pry%>

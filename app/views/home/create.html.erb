@@ -1,0 +1,15 @@
+<%= form_for @user_info , :url =>{:action =>"new"} do |f| %>
+			<%= f.label "Name:" %>		
+			<%= f.text_field :name %>
+		<%= f.label "Age:" %>		
+		<%= f.text_field :occupation %>
+		<%= f.label "Occupation:" %>		
+		<%= f.text_field :occupation %>
+		<%= f.label "Education:" %>		
+		<%= f.text_field :education %>
+		<%= f.label "Phone No:" %>		
+<%= f.text_field :phone %>
+
+		<%= f.submit "Create"%>
+  <% end %>
+
