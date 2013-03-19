@@ -7,6 +7,7 @@ gem 'devise'
 
 gem 'sqlite3'
 
+gem 'carrierwave'
 gem 'devise'
 gem 'pry-rails'
 
