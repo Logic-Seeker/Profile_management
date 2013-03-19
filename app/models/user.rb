@@ -11,6 +11,5 @@ class User < ActiveRecord::Base
   after_create :build_userinfo
 
   def build_userinfo
-		  binding.pry
   end
 end
