@@ -1,5 +1,5 @@
 ProfileManagement::Application.routes.draw do
-<<<<<<< HEAD
+
   devise_for :users do 
     get '/users/sign_out' => 'devise/sessions#destroy' 
     match '/users/sign_in' => 'devise/sessions#new' , :as => "log_in"
@@ -9,11 +9,6 @@ ProfileManagement::Application.routes.draw do
 
     #match '/users/sign_in' => 'devise/sessions#new' , :as => "login"
 
-=======
-  get "rake/routes"
-
-  devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
->>>>>>> 64820673b45200a99cf4bc4a7bf93c72f182a443
   get "home/index"
   get "home/edit"
   root :to => "home#index"
