@@ -1,15 +1,16 @@
 <%= form_for @user_info , :url =>{:action =>"update"} do |f| %>
 			<%= f.label "Name:" %>		
-			<%= f.text_field :name,:value => "#{@user_info.name}" %>
+			<%= f.text_field :name,:value => "#{@user_info.name}" %></br>
 		<%= f.label "Age:" %>		
-		<%= f.text_field :age ,:value => "#{@user_info.age}" %>
+		<%= f.text_field :age ,:value => "#{@user_info.age}" %></br>
 		<%= f.label "Occupation:" %>		
-		<%= f.text_field :occupation ,:value => "#{@user_info.occupation}" %>
+		<%= f.text_field :occupation ,:value => "#{@user_info.occupation}" %></br>
 		<%= f.label "Education:" %>		
-		<%= f.text_field :education ,:value => "#{@user_info.education}" %>
+		<%= f.text_field :education ,:value => "#{@user_info.education}" %></br>
 		<%= f.label "Phone No:" %>		
-<%= f.text_field :phone ,:value => "#{@user_info.phone}" %>
-
+		<%= f.text_field :phone ,:value => "#{@user_info.phone}" %></br>
+		<%= f.label "Picture" %>
+		<%= f.file_field :pictuer,:value => "#{@user_info.pictuer}" %> <%= image_tag @user_info.pictuer, :size => "15x15" %> </br>
 		<%= f.submit "Update"%>
   <% end %>
 

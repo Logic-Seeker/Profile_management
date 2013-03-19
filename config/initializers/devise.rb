@@ -112,9 +112,9 @@ Devise.setup do |config|
    ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => "mail.lftechnology.com",
-  :user_name            => "",
-  :password             => "",
+  :domain               => "gmail.com",
+  :user_name            => "shobhabstha@gmail.com",
+  :password             => "shresthas01",
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
