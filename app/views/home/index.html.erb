@@ -1,4 +1,8 @@
 Welcome to home pages
+
+<%= render '/form' %>
+
+
 <% if UserInfo.find_by_user_id(current_user.id).nil? %>
 		
 		<%= link_to "create",:controller =>'home',:action =>'create' %>
@@ -6,7 +10,7 @@ Welcome to home pages
 <% @user_info = UserInfo.find_by_user_id(current_user.id) %>
 </br>
 </br>
-		Name : <%=@user_info.name  %></br>
+		Name : <%= current_user.username  %></br>
 		Email : <%= current_user.email %></br>
 		Age : <%= @user_info.age %></br>
 		Phone No : <%= @user_info.phone %>
