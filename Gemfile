@@ -4,7 +4,9 @@ gem 'rails', '3.2.12'
 gem 'devise'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails'
 gem 'sqlite3'
 
 gem 'carrierwave'
