@@ -1,14 +1,16 @@
 <%= form_for @user_info , :url =>{:action =>"new"} do |f| %>
 			<%= f.label "Name:" %>		
-			<%= f.text_field :name %>
+			<%= f.text_field :name %></br>
 		<%= f.label "Age:" %>		
-		<%= f.text_field :occupation %>
-		<%= f.label "Occupation:" %>		
-		<%= f.text_field :occupation %>
+		<%= f.text_field :age %></br>
+		<%= f.label "Occupation:" %>>	
+		<%= f.text_field :occupation %></br>
 		<%= f.label "Education:" %>		
-		<%= f.text_field :education %>
+		<%= f.text_field :education %></br>
 		<%= f.label "Phone No:" %>		
-<%= f.text_field :phone %>
+		<%= f.text_field :phone %></br>
+		<%= f.label "Picture" %>
+		<%= f.file_field :pictuer %></br>
 
 		<%= f.submit "Create"%>
   <% end %>

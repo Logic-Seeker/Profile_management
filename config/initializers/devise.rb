@@ -112,7 +112,7 @@ Devise.setup do |config|
    ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => "mail.lftechnology.com",
+  :domain               => "gmail.com",
   :user_name            => "",
   :password             => "",
   :authentication       => "plain",
