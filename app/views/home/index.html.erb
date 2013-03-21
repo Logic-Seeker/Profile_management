@@ -1,20 +1,17 @@
-Welcome to home pages
+<h1 id="hometitle">Welcome to Home Page</h1>
 
 <% if UserInfo.find_by_user_id(current_user.id).nil? %>
-		
-		<%= link_to "create",:controller =>'home',:action =>'create' %>
+	<%= link_to "create",:controller =>'home',:action =>'create' %>
 <% else %>
-<% @user_info = UserInfo.find_by_user_id(current_user.id) %>
-</br>
-</br>
-
-<%= image_tag @user_info.pictuer, :size => "100x100" %></br>
-		Name : <%=current_user.username  %></br>
-
-		Email : <%= current_user.email %></br>
-		Age : <%= @user_info.age %></br>
-		Phone No : <%= @user_info.phone %>
-		Occupation : <%= @user_info.occupation %></br>
-		Education : <%= @user_info.education %><br></br>
-		<%= link_to "Edit",:controller => 'home',:action => 'edit' %>
+	<div id="display">
+		<% @user_info = UserInfo.find_by_user_id(current_user.id) %>
+		<%= image_tag @user_info.pictuer, :size => "100x100" %></br>
+		<p><h>Name :</h><%=@user_info.name  %></p></br>
+		<p><h>Email :</h> <%= current_user.email %></p></br>
+		<p><h>Age :</h> <%= @user_info.age %></p></br>
+		<p><h>Phone No :</h> <%= @user_info.phone %></p></br>
+		<p><h>Occupation :</h> <%= @user_info.occupation %></p></br>
+		<p><h>Education :</h> <%= @user_info.education %></p><br></br>
+	</div>
+	<%= link_to "Edit",:controller => 'home',:action => 'edit' %>
 <% end %>

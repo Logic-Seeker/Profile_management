@@ -1,3 +1,26 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#hometitle{
+	font-size: 28px;
+}
+
+#display p{
+	position: absolute;
+	text-align: left;
+	left:550px;
+}
+
+#display p h{
+	font-weight:bold;
+}
+
+#editprofile{
+	font-size:24px;
+	color:#00FFFF;
+}
+
+.photo{
+	margin-left:83px;
+}
