@@ -1,17 +1,22 @@
 <h1 id="hometitle">Welcome to Home Page</h1>
 
 <% if UserInfo.find_by_user_id(current_user.id).nil? %>
-	<%= link_to "create",:controller =>'home',:action =>'create' %>
+	</br>
+	<%= link_to "Create Profile",:controller =>'home',:action =>'create' %>
 <% else %>
 	<div id="display">
-		<% @user_info = UserInfo.find_by_user_id(current_user.id) %>
-		<%= image_tag @user_info.pictuer, :size => "100x100" %></br>
+		<% @user_info = UserInfo.find_by_user_id(current_user.id) %></br>
+		<%= image_tag @user_info.pictuer, :size => "100x100" %></br></br>
 		<p><h>Name :</h><%=@user_info.name  %></p></br>
 		<p><h>Email :</h> <%= current_user.email %></p></br>
+		<% unless @user_info.age.nil? %>
 		<p><h>Age :</h> <%= @user_info.age %></p></br>
-		<p><h>Phone No :</h> <%= @user_info.phone %></p></br>
+		<% end %>
 		<p><h>Occupation :</h> <%= @user_info.occupation %></p></br>
-		<p><h>Education :</h> <%= @user_info.education %></p><br></br>
+		<p><h>Education :</h> <%= @user_info.education %></p><br>
+		<p><h>Address :</h> <%= @user_info.address %></p><br>
+		<p><h>Phone No :</h> <%= @user_info.phone %></p></br>
 	</div>
+	</br>
 	<%= link_to "Edit",:controller => 'home',:action => 'edit' %>
 <% end %>

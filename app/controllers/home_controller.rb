@@ -6,10 +6,15 @@ class HomeController < ApplicationController
 		  @user_info = UserInfo.find_by_user_id(current_user.id)
   end
   def new
-		  @userinfo = UserInfo.new(params[:user_info])
-		  @userinfo.user_id = current_user.id
-		  @userinfo.save!
-		  render 'index.html.erb'
+		  @user_info = UserInfo.new(params[:user_info])
+		  @user_info.user_id = current_user.id
+			if @user_info.save
+				render 'index.html.erb'
+			else
+				flash[:error]=@user_info.errors.full_messages
+				render 'create.html.erb'
+			end
+
   end	  
   def edit
 		  @user_info = UserInfo.find_by_user_id(current_user.id)
@@ -21,7 +26,11 @@ class HomeController < ApplicationController
   def update
 		 @user_info = UserInfo.find_by_user_id(current_user.id)
 		  @user_info.attributes = params[:user_info]
-		  @user_info.save!
-		  render 'index.html.erb'
+		  if @user_info.save
+				render 'index.html.erb'
+			else
+				flash[:error]=@user_info.errors.full_messages
+				render 'edit.html.erb'
+			end
   end
 end

@@ -1,16 +1,21 @@
+<p class="error"><%= flash[:error][0] unless flash[:error].nil?%></p>
+<header id="editprofile">Create Profile</header>
+</br>
 <%= form_for @user_info , :url =>{:action =>"new"} do |f| %>
 			<%= f.label "Name:" %>		
 			<%= f.text_field :name %></br>
 		<%= f.label "Age:" %>		
 		<%= f.text_field :age %></br>
-		<%= f.label "Occupation:" %>>	
+		<%= f.label "Occupation:" %>	
 		<%= f.text_field :occupation %></br>
 		<%= f.label "Education:" %>		
 		<%= f.text_field :education %></br>
 		<%= f.label "Phone No:" %>		
 		<%= f.text_field :phone %></br>
+		<%= f.label "Address:" %>		
+		<%= f.text_field :address %></br>
 		<%= f.label "Picture:" %>
-		<%= f.file_field :pictuer %></br>
+		<p class="photo" ><%= f.file_field :pictuer %></p></br>
 
 		<%= f.submit "Create"%>
   <% end %>

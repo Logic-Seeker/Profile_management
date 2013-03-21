@@ -5,6 +5,6 @@ class UserInfo < ActiveRecord::Base
 
   #validates :age, :phone #, :numericality => true
 
-  validates :address, :age, :education, :phone, presence: :true
-
+  validates :name,:occupation,:education, :phone,:address,:pictuer, :presence => true
+	validates_numericality_of :age, :only_integer => true,:allow_blank => true
 end

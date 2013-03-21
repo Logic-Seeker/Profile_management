@@ -1,3 +1,4 @@
+<p class="error"><%= flash[:error][0] unless flash[:error].nil?%></p>
 <header id="editprofile">Edit Profile</header>
 </br>
 <%= form_for @user_info , :url =>{:action =>"update"} do |f| %>
@@ -11,6 +12,8 @@
 		<%= f.text_field :education ,:value => "#{@user_info.education}" %></br>
 		<%= f.label "Phone No:" %>		
 		<%= f.text_field :phone ,:value => "#{@user_info.phone}" %></br>
+		<%= f.label "Address:" %>	
+		<%= f.text_field :address,:value =>"#{@user_info.address}" %>
 		<%= f.label "Picture:" %>
 		<p class="photo"><%= f.file_field :pictuer,:value => "#{@user_info.pictuer}" %></p> <%= image_tag @user_info.pictuer, :size => "25x25" %> </br></br>
 		<%= f.submit "Update"%>
