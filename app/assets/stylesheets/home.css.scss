@@ -28,7 +28,7 @@
 	color:red;
 }
 
-.namefield label{
+.namefield .labelname{
 	float: left;
 	margin-left: 550px;
 	margin-right: -273px;
@@ -58,4 +58,14 @@
 
 #edit_user_info_11{
 	margin-top:20px;
+}
+
+.field_with_errors{
+display:inline;
+margin-left:105px;
+}
+.message{
+	color:red;
+	display:inline;
+	padding-left:20px;
 }
