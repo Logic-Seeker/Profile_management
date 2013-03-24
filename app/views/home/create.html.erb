@@ -2,21 +2,36 @@
 <header id="editprofile">Create Profile</header>
 </br>
 <%= form_for @user_info , :url =>{:action =>"new"} do |f| %>
-			<%= f.label "Name:" %>		
-			<%= f.text_field :name %></br>
+	<div class="namefield">
+		<%= f.label "Name:" %>		
+		<%= f.text_field :name %></br>
+	</div>
+	<div class="namefield">
 		<%= f.label "Age:" %>		
 		<%= f.text_field :age %></br>
+	</div>
+	<div class="namefield">
 		<%= f.label "Occupation:" %>	
 		<%= f.text_field :occupation %></br>
+	</div>
+	<div class="namefield">
 		<%= f.label "Education:" %>		
 		<%= f.text_field :education %></br>
+	</div>
+	<div class="namefield">
 		<%= f.label "Phone No:" %>		
 		<%= f.text_field :phone %></br>
+	</div>
+	<div class="namefield">
 		<%= f.label "Address:" %>		
 		<%= f.text_field :address %></br>
+	</div>
+	<div class="namefield">
 		<%= f.label "Picture:" %>
-		<p class="photo" ><%= f.file_field :pictuer %></p></br>
-
+		<%= f.file_field :pictuer ,:class=>"createpicture"%></br>
+	</div>
+	<div class="submitbutton">
 		<%= f.submit "Create"%>
-  <% end %>
+	</div>
+<% end %>
 

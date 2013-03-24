@@ -2,20 +2,38 @@
 <header id="editprofile">Edit Profile</header>
 </br>
 <%= form_for @user_info , :url =>{:action =>"update"} do |f| %>
-			<%= f.label "Name:" %>		
-			<%= f.text_field :name,:value => "#{@user_info.name}" %></br>
+	<div class="namefield">
+		<%= f.label "Name:" %>		
+		<%= f.text_field :name,:value => "#{@user_info.name}" %></br>
+	</div>	
+	<div class="namefield">
+
 		<%= f.label "Age:" %>		
-		<%= f.text_field :age ,:value => "#{@user_info.age}" %></br>
-		<%= f.label "Occupation:" %>		
-		<%= f.text_field :occupation ,:value => "#{@user_info.occupation}" %></br>
-		<%= f.label "Education:" %>		
-		<%= f.text_field :education ,:value => "#{@user_info.education}" %></br>
-		<%= f.label "Phone No:" %>		
-		<%= f.text_field :phone ,:value => "#{@user_info.phone}" %></br>
-		<%= f.label "Address:" %>	
-		<%= f.text_field :address,:value =>"#{@user_info.address}" %>
-		<%= f.label "Picture:" %>
-		<p class="photo"><%= f.file_field :pictuer,:value => "#{@user_info.pictuer}" %></p> <%= image_tag @user_info.pictuer, :size => "25x25" %> </br></br>
-		<%= f.submit "Update"%>
-  <% end %>
+		<%= f.text_field :age ,:value => "#{@user_info.age}" %></br>	<div class="namefield">
+		</div>
+		<div class="namefield">
+
+			<%= f.label "Occupation:" %>		
+			<%= f.text_field :occupation ,:value => "#{@user_info.occupation}" %></br>
+		</div>
+		<div class="namefield">
+			<%= f.label "Education:" %>		
+			<%= f.text_field :education ,:value => "#{@user_info.education}" %></br>
+		</div>
+		<div class="namefield">
+			<%= f.label "Phone No:" %>		
+			<%= f.text_field :phone ,:value => "#{@user_info.phone}" %></br>
+		</div>
+		<div class="namefield">
+			<%= f.label "Address:" %>	
+			<%= f.text_field :address,:value =>"#{@user_info.address}" %>
+		</div>
+		<div class="namefield">
+			<%= f.label "Picture:" %>
+			<%= f.file_field :pictuer,:value => "#{@user_info.pictuer}" %> <%= image_tag @user_info.pictuer, :size => "25x25" %> </br></br>
+		</div>
+		<div class="submitbutton">
+			<%= f.submit "Update"%>
+		</div>
+<% end %>
 
