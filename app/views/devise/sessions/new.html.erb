@@ -2,10 +2,10 @@
 
 <%= form_for(resource, :as => resource_name,:validate=>true, :url => session_path(resource_name)) do |f| %>
 	<div class="namefield"><%= f.label :email,:class=>'labelname' %>
-		<%= f.email_field :email, :autofocus => true,:validate=>true %></div>
+		<%= f.email_field :email, :autofocus => true,:validate=>{:presence=>true,:uniqueness=>false} %></div>
 
 	<div class="namefield"><%= f.label :password ,:class=>'labelname'%>
-		<%= f.password_field :password ,:validate=>true%></div>
+		<%= f.password_field :password ,:validate=>{:presence=>true}%></div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="submit"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>

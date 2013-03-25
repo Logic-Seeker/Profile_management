@@ -9,7 +9,7 @@
 	<div class="namefield">
 
 		<%= f.label "Age:",:class=>'labelname' %>		
-		<%= f.text_field :age ,:value => "#{@user_info.age}" %></br>	<div class="namefield">
+		<%= f.text_field :age ,:value => "#{@user_info.age}" %>	
 		</div>
 		<div class="namefield">
 
@@ -30,7 +30,7 @@
 		</div>
 		<div class="namefield">
 			<%= f.label "Picture:" ,:class=>'labelname' %>
-			<%= f.file_field :pictuer,:value => "#{@user_info.pictuer}",:validate => { :presence => false } %> <%= image_tag @user_info.pictuer, :size => "25x25" %> </br></br>
+			<%= f.file_field :pictuer,:value => "#{@user_info.pictuer}",:validate => { :presence => false } %> <%= image_tag @user_info.pictuer,:class=>"photo" ,:size => "35x35" %> </br></br>
 		</div>
 		<div class="submitbutton">
 			<%= f.submit "Update"%>
