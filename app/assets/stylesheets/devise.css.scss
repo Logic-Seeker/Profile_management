@@ -53,11 +53,44 @@ width: 90px;}
 
 .submit{
 	margin-left: -1px;
-	margin-top: 23px;
+	margin-top: 49px;
 	width: 100%;
 }
 #new_user{
 	margin-top:30px;
+}
+
+.namefield .field_with_errors .labelname{
+	width:50%;
+}
+
+/*.namefield .field_with_errors #user_password{
+	float:left;
+	margin-left:-150px;
+}*/
+.namefield .field_with_errors .message{
+	float:left;
+	margin-top:-7px;
+}
+.namefield .field_with_errors #user_email{
+	float:left;
+	margin-left:-150px;
+}
+
+/*.namefield #user_password{
+	float:left;
+}*/
+
+.namefield .labelname{
+	float: left;
+	margin-left: 550px;
+	margin-right: -376px;
+	text-align: left;
+width: 90px;
+}
+.namefield .field_with_errors #user_password{
+	float:left;
+	margin-left:-150px;
 }
 
 
