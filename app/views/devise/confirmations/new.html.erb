@@ -1,9 +1,8 @@
 <h2>Resend confirmation instructions</h2>
 
 <%= form_for(resource, :as => resource_name, :validate=>true,:url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
 
-	<div class="namefield"><%= f.label :email ,:class=>'labelname'%>
+	<div class="namefield"><%= f.label :email , "Email<span class='big'>*</span>".html_safe ,:class=>'labelname'%>
 		<%= f.email_field :email, :autofocus => true ,:validate=>{:presence=>true,:uniqueness=>false}%></div>
 
   <div class="submit"><%= f.submit "Resend confirmation instructions" %></div>

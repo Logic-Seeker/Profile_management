@@ -15,6 +15,7 @@ display:block;
 color:red;
 text-align:left;
 text-indent:20px;
+padding-top:10px;
 }
 
 .field_with_errors input{
@@ -33,4 +34,23 @@ height:20px;
 
 .submit{
 margin-top:60px !important;
+}
+
+.password_confirmation_error{
+	margin-top: -11px;
+	text-align: left;
+	text-indent: 20px;
+	height:0px;
+}
+
+.p_v_error_message{
+	color:red;
+}
+
+.importance{
+	float:left;
+}
+
+.big{
+color:red;
 }

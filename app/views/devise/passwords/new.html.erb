@@ -3,7 +3,7 @@
 <%= form_for(resource, :as => resource_name,:validate=>true, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
-	<div class="namefield"><%= f.label :email,:class=>'labelname' %>
+	<div class="namefield"><%= f.label :email, "Email<span class='big'>*</span>".html_safe ,:class=>'labelname' %>
 		<%= f.email_field :email, :autofocus => true,:validate=>{:uniqueness=>false,:presence=>true} %></div>
 
   <div class="submit"><%= f.submit "Send me reset password instructions" %></div>

@@ -8,8 +8,5 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :picture, :first_name, :last_name, :address, :phone, :occupation
   # attr_accessible :title, :body
-  after_create :build_userinfo
-
-  def build_userinfo
-  end
+	validates :password_confirmation ,:presence=>true
 end

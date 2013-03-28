@@ -2,4 +2,34 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  errors:
+    format: "%{message}"
+
+  activerecord:
+    errors:
+      models: 
+        user:
+          attributes:
+            email:
+              blank: "Email Address can not be blank"
+              invalid: "Email Address is not vaild"
+            password: 
+              blank: "Please Provide with Password "
+              too_short: "Password should be at least 8 charater long"
+        user_info: 
+          attributes:
+            name:
+              blank: "Please fill in the Name"
+            occupation:
+              blank: "Please provide your Occupation"
+            education: 
+              blank: "Please provide your Educational information"
+            age:
+              not_a_number: "The age should be an integer and less then 100"
+              less_than_or_equal_to: "The age can not be more then 100"
+            phone:
+              blank: "Please provide your Phone Number"
+            address:
+              blank:  "Address field can not be blank"
+            pictuer:
+              blank: "Please select your picture for Profile"

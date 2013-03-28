@@ -4,7 +4,7 @@ class UserInfo < ActiveRecord::Base
   belongs_to :user
 
   #validates :age, :phone #, :numericality => true
-
+	
   validates :name,:occupation,:education, :phone,:address,:pictuer, :presence => true
-	validates_numericality_of :age, :only_integer => true,:allow_blank => true
+	validates_numericality_of :age, :only_integer => true,:less_than_or_equal_to => 100, :allow_blank => true
 end

@@ -2,19 +2,17 @@
 
 <%= form_for(resource, :as => resource_name,:validate=>true, :url => registration_path(resource_name)) do |f| %>
 	<%= devise_error_messages! %>
+	
+	<div class="namefield"><%= f.label :email, "Email<span class='big'>*</span>".html_safe ,:class=>'labelname'%>
+		<%= f.email_field :email, :autofocus => true ,:validate=>true%></div>
 
-	<div class="namefield"><%= f.label :username,:class=>'labelname'%>
-		<%= f.text_field :username ,:class=>"text" %></div>
-
-	<div class="namefield"><%= f.label :email ,:class=>'labelname'%>
-			<%= f.email_field :email, :autofocus => true ,:validate=>true%></div>
-
-		<div class="namefield"><%= f.label :password ,:class=>'labelname'%>
+		<div class="namefield"><%= f.label :password , "Password<span class='big'>*</span>".html_safe ,:class=>'labelname'%>
 			<%= f.password_field :password,:class=>"text",:validate=>true %></div>
 
-		<div class="namefield"><%= f.label :password_confirmation ,:class=>'labelname'%>
-			<%= f.password_field :password_confirmation ,:class=>"text"%></div>
-
+		<div class="namefield"><%= f.label :password_confirmation , "Password confirmation<span class='big'>*</span>".html_safe ,:class=>'labelname'%>
+			<%= f.password_field :password_confirmation ,:class=>"text",:validate=>true %></div>
+		<label class="password_confirmation_error"><p class="p_v_error_message"></p>
+			</label>
 		<div class="submit"><%= f.submit "Sign up" %></div>
 	<% end %>
 	</br>

@@ -1,10 +1,10 @@
 <h2>Sign in</h2>
 
 <%= form_for(resource, :as => resource_name,:validate=>true, :url => session_path(resource_name)) do |f| %>
-	<div class="namefield"><%= f.label :email,:class=>'labelname' %>
+	<div class="namefield"><%= f.label :email, "Email<span class='big'>*</span>".html_safe ,:class=>'labelname' %>
 		<%= f.email_field :email, :autofocus => true,:validate=>{:presence=>true,:uniqueness=>false} %></div>
 
-	<div class="namefield"><%= f.label :password ,:class=>'labelname'%>
+	<div class="namefield"><%= f.label :password , "Password<span class='big'>*</span>".html_safe ,:class=>'labelname'%>
 		<%= f.password_field :password ,:validate=>{:presence=>true}%></div>
 
   <% if devise_mapping.rememberable? -%>
